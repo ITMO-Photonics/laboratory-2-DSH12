@@ -14,10 +14,11 @@ def init():
 
 def updatefig(frame):
     coord[0] += 0.1
+    coord[1] += 0.1
     circle.set_xdata(coord[0])
     circle.set_ydata(coord[1])
     return circle,
 
-anim = animation.FuncAnimation(fig, updatefig, frames=20, init_func=init, interval=100, blit=True, repeat=False)
+anim = animation.FuncAnimation(fig, updatefig, frames=5, init_func=init, interval=100, blit=True, repeat=False)
 
 plt.show()
